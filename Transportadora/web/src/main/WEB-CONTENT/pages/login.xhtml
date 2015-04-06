@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<body>
+	<ui:composition template="./templates/loginTemplate.xhtml">
+		<ui:define name="loginCorpo">
+				<h:form id="jslogin">
+					<h:outputText value=" Login" for="login" />
+					<h:inputText id="address" value="#{loginMB.nome}" />
+					<p></p>
+					<h:outputText value=" Senha" for="login" />
+					<h:inputSecret redisplay="false" value="#{loginMB.senha}" />
+					<p></p>
+					<br />
+					<h:commandButton id="submit" value="#{loginMB.logar}"
+						action="nextPage">
+					</h:commandButton>
+					<br />
+					<br />
+				</h:form>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>
